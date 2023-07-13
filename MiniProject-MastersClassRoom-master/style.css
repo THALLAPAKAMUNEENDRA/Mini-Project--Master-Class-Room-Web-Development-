@@ -1,0 +1,117 @@
+@media (min-width: 768px) {
+    .news-input {
+        width: 50%;
+    }
+    #learn{
+        padding:0%;
+    }
+    #learn ul{
+        padding: 0px;
+    }
+}
+
+@media (min-width:320px) and (max-width:479px) {
+  .copy-rights a{
+    font-size: 12px;
+    color: red;
+  }
+  #learn li{
+    font-size: 12px;
+  }
+}
+
+body::before {
+    display: block;
+    content: "";
+    height: 30px;
+}
+
+a:hover {
+    font-size: large;
+    cursor: pointer;
+    color: white;
+}
+section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #45505b;
+  }
+  .section-title {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .contact .info .email, .contact .info .phone {
+    margin-top: 40px;
+  }
+  
+  .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #0563bb;
+    color: #fff;
+  }
+  .contact .info {
+    width: 100%;
+    background: #fff;
+  }
+  
+  .contact .info i {
+    font-size: 20px;
+    color: #0563bb;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #eef7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #45505b;
+  }
+  
+  .contact .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #728394;
+  }
+
+/*footer start*/
+*{
+    margin: 0;
+    padding: 0;
+}
+.footer-menu-list {
+    list-style: none;
+}
+.footer a{
+    text-decoration: none;
+    color: rgb(0, 162, 255);
+}
+.copy-rights a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.copy-rights a:hover{
+    color: white;
+}
+.copy-rights i{
+    color: blue;
+}
+.copy-rights i:hover{
+    color: white;
+    background-color: black;
+    border-top-right-radius: 95%;
+    border-top-left-radius: 95%;
+}
+  /*footer end*/ 

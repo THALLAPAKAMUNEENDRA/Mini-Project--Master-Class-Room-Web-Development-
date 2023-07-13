@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Masters Class Room</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(function(){
+            $("#header").load('header.html');
+        });
+    </script>
+</head>
+
+<body>
+    <!-- header start -->
+    <div class="container">
+        <header>
+            <div id="header">
+            </div>
+        </header>
+    </div>
+    <!-- header end -->
+
+    <!-- logo name mention start -->
+    <section class="bg-dark text-light p-5 p-lg-2 pt-lg-5 text-center tetx-sm-start">
+            <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Login</strong>Successful !.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div> -->
+        <div class="container">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h1>Welcome to <span class="text-warning">Masters Class Room</span> </h1>
+                    <p class="lead my-4">The Knowledge Expert</p>
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#register" >Start Learning</button>
+                </div>
+                <img class="img-fluid w-50 d-none d-sm-block" src="media/logo.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- logo name mention end -->
+
+    <!-- news letter start-->
+    <section class="bg-primary text-light p-3">
+        <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+                <h3 class="mb-3 md-md-0">Sign up for our Newsletter</h3>
+                <div class="input-group news-input">
+                    <input type="text" class="form-control">
+                    <button class="btn btn-dark btn-lg" type="button" id="button-addon2">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- news letter end -->
+
+    <!-- card start -->
+    <section class="p-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md">
+                    <div class="card bg-dark text-white">
+                        <card-body class="text-center p-2">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-laptop"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Online
+                            </h3>
+                            <p class="card-text">
+                                Live classes through online with flexible timings.
+                            </p>
+                            <a href="liveClasses/liveindex.html" class="btn btn-primary">Read More</a>
+                        </card-body>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-secondary text-white">
+                        <card-body class="text-center p-2">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h3 class="card-title mb-3">
+                                Video
+                            </h3>
+                            <p class="card-text">
+                                Recorded Video classes at your place.
+                            </p>
+                            <a href="videoClasses/videos_index.html" class="btn btn-primary">Visit</a>
+                        </card-body>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="card bg-dark text-white">
+                        <card-body class="text-center p-2">
+                            <div class="h1 mb-3">
+                                <i class="bi bi-person-square"></i>
+                            </div>
+                            <h3 class="card-title mb-3">In Person</h3>
+                            <p class="card-text">
+                                Classes are held on class rooms.Interaction with experts.
+                            </p>
+                            <a href="inPerson/inPerson_index.html" class="btn btn-primary">Read More</a>
+                        </card-body>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- card end -->
+
+    <!-- learn 1 - start -->
+    <section id="learn" class="p-3 bg-dark text-light" >
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6">
+                    <h2>Learn Fundamentals of Database</h2><br>
+                    SQL that will get you hired – SQL for Business Analysis, Marketing, and Data Management<br>
+                    <ul class="p-2">
+                        <li>Become an expert in SQL</li>
+                        <li>Learn how to code in SQL</li>
+                        <li>Boost your resume by learning an in-demand skill</li> 
+                        <li>Create, design, and operate with SQL databases</li>
+                        <li>Start using MySQL – the #1 Database Management System</li>
+                        <li>Learn how to code in SQL</li>
+                        <li>Boost your resume by learning an in-demand skill</li> 
+                        <li>Create, design, and operate with SQL databases</li>
+                        <li>Start using MySQL – the #1 Database Management System</li>
+                    </ul><br>
+                    <div class="text-center">
+                       
+                        <button class="btn btn-primary ">
+                            Read More
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6">
+                        <img src="media/sq.png" class="img-fluid d-none d-sm-block" alt="database">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- learn 1 - end -->
+
+    <!-- learn -2 start -->
+    <section id="learn" class="p-3" >
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6">
+                    <h2>Learn Fundamentals of Cloud</h2><br>
+                    Cloud that will get you hired – DevOps Engineer/Cloud Engineer,Cloud Solution Architect
+                    <ul class="p-2">
+                        <li>Learn the core concepts of Cloud Computing and Quantum Computing</li>
+                        <li>Learn the types of clouds.</li>
+                        <li>Boost your resume by learning an in-demand skill</li> 
+                        <li>Learn about laaS,SaaS,PaaS</li>
+                        <li>Learn Cloud Computing Planning,Cloud Security and Cloud Operations.</li>
+                        <li>How does quantum computing works</li>
+                        <li>Boost your resume by learning an in-demand skill</li> 
+                        <li>Amazon Web Services,Google Cloud Platform,Salesforce,and Office 365</li>
+                    </ul><br>
+                    <div class="text-center">
+                        <button class="btn btn-success ">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                        <img src="media/cloud.png" class="img-fluid d-none d-sm-block " alt="cloud">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- learn 2 end -->
+
+     <!-- learn -3 start -->
+     <section id="learn" class="p-3 bg-dark text-light position-relative" >
+        <div class="container">
+			<h1 class="text-center">Expertise your Programming Skills</h1><br>
+            <div class="row align-items-center justify-content-between ">
+				<div class="col-md-6 p-2 for-p">
+						<h2 style="color: cornsilk;">Learn JAVA</h2>
+                        JAVA that will get you hired – Java developer,Java Software Engineer.
+                        <ul>
+                            <li>Learn Java Programming for Standard Edition Java SE</li>
+                            <li>Learn GUI Programming</li>
+                            <li>Learn Multithreaded Programming</li> 
+                            <li>Find out the fundamental Java abilities you'll need to succeed in your job search for Java Developer jobs.</li>
+                            <li>If you so choose,you will be able to sit for and pass the Oracle Java Certificate test.</li>
+                            <li>Be able to show your knowledge of Java to potential employers.</li>
+                        </ul><br>
+							<div class="text-center">
+								<button class="btn btn-success ">
+									Read More
+								</button>
+							</div>                
+				</div><br>
+                <div class="col-md-6 p-2 for-p position-relative top-0">
+                    <h2 style="color: cornsilk;">Learn Python</h2>
+                    PYTHON that will get you hired – 
+                    <ul>
+                        <li>Become an expert in Python</li>
+                        <li>Learn to use Object Oriented Programming with classes!</li>
+                        <li>Boost your resume by learning an in-demand skill</li> 
+                        <li>Understand how to use both the Jupyter Notebook and create .py files</li>
+                        <li>Learn to use Python professionally,learning both Python 2 and Python 3!</li>
+                        <li>Build a complete understanding of Python from ground up!</li>
+                    </ul><br>
+                    <div class="text-center">
+                        <button class="btn btn-success ">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- learn 3 end -->
+
+
+    <!-- q accordion start-->
+    <section class="p-3" id="questions">
+        <div class="container">
+            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+            <div class="accordion accordion-flush" id="questions">
+                <!-- 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-1" aria-controls="flush-collapseOne">
+                            What are the technical requirements your course?
+                        </button>
+                    </h2>
+                    <div id="question-1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#questions">
+                        <div class="accordion-body">All online courses require an internet connection.And although they may have different technical requirements, 
+                            almost all online courses are offered through this website, a web-based learning system. 
+                            Generally, you'll interact with the instructor and other students via email, discussion boards, interactive chat rooms, video conferences, and/or phone. 
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-2" aria-controls="flush-collapseTwo">
+                            Can i take more than one course at a time?
+                        </button>
+                    </h2>
+                    <div id="question-2" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#questions">
+                        <div class="accordion-body">If you are new to online learning, we recommend that you begin with one course.
+                             As our courses are offered frequently throughout the year, you can always come back and continue your studies with one or more topics.
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-3" aria-controls="flush-collapseThree">
+                            How do I contact technical support during my course?
+                        </button>
+                    </h2>
+                    <div id="question-3" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                        data-bs-parent="#questions">
+                        <div class="accordion-body">
+                            For technical support, please text us through Contact Us form, 09:00 – 22:00 GMT, Monday – Friday. We are ready to help!
+                        </div>
+                    </div>
+                </div>
+                 <!-- 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#question-4" aria-controls="flush-collapseFour">
+                            Can i take more than one course at a time?
+                        </button>
+                    </h2>
+                    <div id="question-4" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                        data-bs-parent="#questions">
+                        <div class="accordion-body">If you are new to online learning, we recommend that you begin with one course.
+                             As our courses are offered frequently throughout the year, you can always come back and continue your studies with one or more topics.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- accordion end -->
+
+    <!-- instructor start -->
+    <section id="Instructors" class="p-3 pb-5 bg-primary">
+        <div class="container">
+            <h2 class="text-center text-white">Our Instructors</h2>
+            <p class="lead text-center text-white mb-5">
+                Our Instructor all have 5+ years of working experience
+            </p>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/11.jpg" class="rounded-circle" alt="">
+                            <h3 class="card-title mb-3">
+                                Somasekhar R
+                            </h3>
+                            <p class="card-text">Expert in Science</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/26.jpg" class="rounded-circle" alt="">
+                            <h3 class="card-title mb-3">
+                                Dr. Muneedra T
+                            </h3>
+                            <p class="card-text">Expert in Finance</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/47.jpg" class="rounded-circle" alt="">
+                            <h3 class="card-title mb-3">
+                                Dr.Dhanasekhar S
+                            </h3>
+                            <p class="card-text">Expert in Mathematics</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card bg-light">
+                        <div class="card-body text-center">
+                            <img src="https://randomuser.me/api/portraits/men/24.jpg" class="rounded-circle" alt="">
+                            <h3 class="card-title mb-3">
+                                Dr.Ganesh V
+                            </h3>
+                            <p class="card-text">Expert in Data Science</p>
+                            <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                            <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- instructor end -->
+
+    <!-- contact start -->
+     <section id="contact" class="contact p-5">
+        <div class="container" data-aos="fade-up">
+          <div class="section-title">
+            <h2>Contact</h2>
+          </div>
+  
+          <div class="row mt-1">
+  
+            <div class="col-lg-4">
+              <div class="info">
+                <div class="address">
+                  <i class="bi bi-geo-alt"></i>
+                  <h4>Location:</h4>
+                  <p>Tirupati Andhra Pradesh India</p>
+                </div>
+  
+                <div class="email">
+                  <i class="bi bi-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@projectk.com</p>
+                </div>
+  
+                <div class="phone">
+                  <i class="bi bi-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+91 1234567890</p>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-8 mt-5 mt-lg-0">
+  
+              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  </div>
+                  <div class="col-md-6 form-group mt-3 mt-md-0">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  </div>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                </div>
+                <div class="form-group mt-3">
+                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                </div>
+                <div class="my-3">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button class="btn btn-primary" type="submit">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+    <!-- contact end -->
+
+    <!-- footer start -->
+    <section class="bg-dark text-light p-5">
+        <footer class=" container footer">
+            <div class="footer-logo text-warning">
+                <h3>MastersClassRoom</h3>
+            </div>
+            <div class="footer-content row">
+                <div class="col-sm-3 p-2">
+                    <h4 class="text-white">Get Started</h4>
+                    <ul id="menu-get-started" class="footer-menu-list">
+                        <li>
+                            <a href="#">Start</a>
+                        </li>
+                        <li>
+                            <a href="#">Technology</a>
+                        </li>
+                        <li>
+                            <a href="#">Science</a>
+                        </li>
+                        <li>
+                            <a href="#">Interview Preparation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 p-2">
+                    <h4 class="text-white"> Company</h4>
+                    <ul id="menu-company" class="footer-menu-list">
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">Careers</a>
+                    </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 p-2">
+                    <h4 class="text-white"> Quick Links</h4>
+                    <ul id="menu-quick-links" class="footer-menu-list">
+                        <li>
+                            <a target="_blank" rel="noopener noreferrer" href="#">Support Center</a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener noreferrer" href="#">Service Status</a>
+                        </li>
+                        <li>
+                            <a href="#">Security</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Customers</a></li>
+                        <li>
+                            <a href="#">Reviews</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 p-2">
+                        <h4 class="text-white"> Let's Chat</h4>
+                        <p> Have a support question?</p>
+                        <a class="btn btn-primary text-white" href="#" target="_self"> Get in Touch </a><br><br>
+                        <h4 class="text-white"> Call Us</h4>
+                            <p> <a class="" href="tel:0124-64XXXX" target="_self"> 0124-644535 </a></p>
+                </div>
+            </div>
+            <div class=" social-links d-flex justify-content-center">Follow Us on: &nbsp; 
+                <a href="#"><i class="bi bi-twitter text-white mx-1"></i></a>&nbsp;
+                <a href="#"><i class="bi bi-facebook text-white mx-1"></i></a>&nbsp;
+                <a href="#"><i class="bi bi-linkedin text-white mx-1"></i></a>&nbsp;
+                <a href="#"><i class="bi bi-instagram text-white mx-1"></i></a>
+            </div>
+        </footer>
+    </section>
+    <!-- copy rights start -->
+        <section class="copy-rights bg-secondary text-white text-center p-3 position-relative">
+            <div class="container">
+                <p>
+                    <a href="#" target="_self"> ©2021. | Designed By: Team@CSSE. | All rights reserved. </a>
+                    <a href="#" class="position-absolute bottom-0 end-0 p-3">
+                        <i class="bi bi-arrow-up-circle h1"></i>
+                    </a>
+                </p>
+            </div>
+        </section>
+    <!-- copy rights end -->
+    <!-- footer end -->
+
+    <!-- Registration Form start -->
+        <div class="modal fade" id="register" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-light">
+                <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="lead">Fill out this form</p>
+                    <form action="../db/include/signup.inc.php" method="post" > 
+                        <div class="mb-2">
+                            <label for="first-name" class="col-form-label">Name:</label><br>
+                            <input type="text" class="form control" id="first-name" name="name" size="50%">
+                        </div>
+                        <div class="mb-2">
+                            <label for="last-name" class="col-form-label">User Name:</label><br>
+                            <input type="text" class="form control" name="uid" id="last-name" size="50%" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="col-form-label">Email:</label><br>
+                            <input type="email" class="form control" name="email" id="email" size="50%" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="pwd" class="col-form-label">Password:</label><br>
+                        <input type="password" class="form control" id="pwd" name="pwd" size="50%" required>
+                        </div>
+                        <div class="mb-2">
+                            <label for="cpwd" class="col-form-label">Confirm Password:</label><br>
+                        <input type="password" class="form control" id="cpwd" name="pwdrepeat" size="50%" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- Registration Form end -->
+
+    <!-- login start -->
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-login">
+                <div class="modal-content">
+                    <div class="modal-header bg-success">
+                        <h4 class="modal-title ">Student Login</h4>
+                        <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="../db/include/login.inc.php" method="post">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="text" type="text" class="form-control" name="uid" placeholder="Username"required>
+                                </div>
+                            </div><br>
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="password" type="password" class="form-control" name="pwd" placeholder="Password"required>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <button type="submit" name="submit" class="btn btn-primary ">Sign In</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer bg-info">Don't have an account? <a data-bs-toggle="modal" data-bs-target="#register">Register</a></div>
+                </div>
+            </div>
+        </div>
+    <!-- login end -->
+</body>
+</html>

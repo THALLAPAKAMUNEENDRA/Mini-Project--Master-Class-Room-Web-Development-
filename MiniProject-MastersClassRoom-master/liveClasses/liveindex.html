@@ -1,0 +1,714 @@
+<!-- <?php
+    session_start();
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#header").load("../header.html");
+      });
+    </script>
+    <title>Expert Classes</title>
+    <style>
+      @media (min-width: 576px) {
+        .product-container {
+          height: 0%;
+        }
+        .product-card,
+        .product-img {
+          height: 50%;
+        }
+      }
+      body::before {
+        display: block;
+        content: "";
+        height: 30px;
+      }
+
+      .product-container {
+        padding: 0 2vw;
+        display: flex;
+        height: auto;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      .trending-container {
+        padding: 0 2vw;
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+      }
+      .product-container::-webkit-scrollbar,
+      .trending-container::-webkit-scrollbar {
+        display: none;
+      }
+
+      .product-card {
+        flex: 0 0 auto;
+        width: 40%;
+        height: auto;
+        margin-right: 1rem;
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+      .trending-card {
+        flex: 0 0 auto;
+        width: 30%;
+        margin-right: 2rem;
+        border-radius: 1rem;
+        padding: 1rem;
+      }
+
+      .product-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        /* border-radius: 1rem; */
+      }
+
+      .product-thumb {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+
+      .discount-tag {
+        position: absolute;
+        background: rgb(14, 182, 56);
+        padding: 5px;
+        border-radius: 5px;
+        color: white;
+        right: 10px;
+        top: 10px;
+        text-transform: capitalize;
+      }
+
+      .card-btn {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px;
+        width: 80%;
+        text-transform: capitalize;
+        transition: 0.5s;
+        cursor: pointer;
+        opacity: 0;
+      }
+
+      .product-card:hover .card-btn {
+        opacity: 1;
+      }
+
+      .product-info {
+        width: 100%;
+        height: 100px;
+        padding: 5px;
+      }
+
+      .product-brand {
+        text-transform: uppercase;
+      }
+
+      .product-short-des {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        overflow: hidden;
+        opacity: 0.5;
+        text-transform: capitalize;
+        margin: 5px 0;
+      }
+
+      .price {
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      .actual-price {
+        margin-left: 20px;
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+      .pre-btn,
+      .nxt-btn {
+        border: none;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+        cursor: pointer;
+        z-index: 8;
+      }
+      .tpre-btn,
+      .tnxt-btn {
+        border: none;
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        top: -200;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%); */
+        cursor: pointer;
+        z-index: 8;
+      }
+      .pre-btn:hover i {
+        background: #0563bb;
+        color: #fff;
+        padding: 5px 5px;
+      }
+      .pre-btn:hover,
+      .nxt-btn:hover,
+      .tpre-btn:hover,
+      .tnxt-btn {
+        color: blue;
+      }
+      .pre-btn,
+      .tpre-btn {
+        left: 0;
+      }
+
+      .nxt-btn,
+      .tnxt-btn {
+        right: 0;
+      }
+      header {
+        background-color: darkgoldenrod;
+      }
+      .checked {
+        color: yellow;
+      }
+      .infos h2 {
+        color: crimson;
+        shape-rendering: auto;
+        text-shadow: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header start -->
+    <div class="container">
+      <header>
+        <div id="header"></div>
+      </header>
+    </div>
+    <br />
+    <!-- header end -->
+    <div class="container p-2 infos">
+      <h2>Most Watched</h2>
+    </div>
+    <section class="p-2 bg-dark text-light">
+      <div class="container-fluid product-container">
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="img/mostw/cloud.png"
+              class="img-fluid product-thumb"
+              alt=""
+            />
+            <button
+              class="card-btn btn btn-primary"
+              onclick="location.href='tutorial1/enrolled.php'"
+            >
+              Enroll Now
+            </button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Cloud Computing</h2>
+            <p class="product-short-des">Become a expert Cloud Computing</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="card product-card bg-light text-dark g-5">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="img/mostw/machinelearning.png"
+              class="product-thumb img-fluid"
+              alt=""
+            />
+            <button
+              class="card-btn btn btn-primary"
+              onclick="location.href='tutorial2/enrolled.php'"
+            >
+              Enroll Now
+            </button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Machine Learning</h2>
+            <p class="product-short-des">
+              Become an expert in Machine Learning
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="card product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img
+              src="img/mostw/python.png"
+              class="product-thumb img-fluid"
+              alt=""
+            />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Python Programming</h2>
+            <p class="product-short-des">Become an expert in python</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/java.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Java Programming</h2>
+            <p class="product-short-des">Become an expert in java</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/swift.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Swift Programming</h2>
+            <p class="product-short-des">Become expert in swift</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/datascience.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Data Science</h2>
+            <p class="product-short-des">Excel in data science using python</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/c.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">C Programming</h2>
+            <p class="product-short-des">Become an expert in C Programming</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/wb.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">front end web developement</h2>
+            <p class="product-short-des">
+              Essential training for front end web development
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/fullstack.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Full stack web development</h2>
+            <p class="product-short-des">Become full stack developer</p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <div class="product-card bg-light text-dark">
+          <div class="product-image">
+            <span class="discount-tag">50% off</span>
+            <img src="img/mostw/ios.png" class="product-thumb" alt="" />
+            <button class="card-btn btn btn-primary">Enroll Now</button>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">iOS Development</h2>
+            <p class="product-short-des">
+              Essential Training for iOS development
+            </p>
+            <span class="price">$20</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+
+        <i class="pre-btn bi bi-arrow-right"></i>
+        <i class="nxt-btn bi bi-arrow-right"></i>
+      </div>
+    </section>
+
+    <script>
+      const productContainers = [
+        ...document.querySelectorAll(".product-container"),
+      ];
+      const nxtBtn = [...document.querySelectorAll(".nxt-btn")];
+      const preBtn = [...document.querySelectorAll(".pre-btn")];
+
+      productContainers.forEach((item, i) => {
+        let containerDimenstions = item.getBoundingClientRect();
+        let containerWidth = containerDimenstions.width;
+
+        nxtBtn[i].addEventListener("click", () => {
+          item.scrollLeft += containerWidth;
+        });
+
+        preBtn[i].addEventListener("click", () => {
+          item.scrollLeft -= containerWidth;
+        });
+      });
+    </script>
+
+    <!-- trending Now start -->
+    <div class="container p-2 infos">
+      <h2>Trending</h2>
+    </div>
+    <section class="p-2">
+      <div class="container-fluid trending">
+        <div class="trending-container">
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img src="img/trending/ml.png" class="img-fluid" alt="" />
+              </div>
+              <h3 class="card-title mb-3">Machine Learning with python</h3>
+              <p class="card-text">
+                Machine Learning using Python by Dr.Siv kesav
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.0 average based on 319 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img
+                  src="img/trending/cloudcomputing.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <h3 class="card-title mb-3">Learn Cloud Computing</h3>
+              <p class="card-text">
+                Cloud computing from scratch by Neal Davis
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.5 average based on 253 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img src="img/trending/swift.png" class="img-fluid" alt="" />
+              </div>
+              <h3 class="card-title mb-3">Swift Programming</h3>
+              <p class="card-text">
+                Swift Programming essential training by Nick Walter
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.0 average based on 254 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img src="img/trending/p.png" class="img-fluid" alt="" />
+              </div>
+              <h3 class="card-title mb-3">Python Programming</h3>
+              <p class="card-text">
+                Learn Python from scratch by Jose Portilla
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.3 average based on 534 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img src="img/trending/java.png" class="img-fluid" alt="" />
+              </div>
+              <h3 class="card-title mb-3">Java Programming</h3>
+              <p class="card-text">
+                Learn Java Programming from basics by Dheeru Mundluru
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.5 average based on 454 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <div class="card trending-card bg-secondary text-white">
+            <card-body class="text-center p-2">
+              <div class="h1 mb-3">
+                <img
+                  src="img/trending/datascience.png"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <h3 class="card-title mb-3">Data Science</h3>
+              <p class="card-text">
+                Data Science using Python by Alexander Hagmann
+              </p>
+              <div>
+                <span class="heading">User Rating</span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p>4.4 average based on 354 reviews.</p>
+              </div>
+              <a href="#" class="btn btn-info">Read More</a>
+            </card-body>
+          </div>
+          <i class="tpre-btn bi bi-arrow-left"></i>
+          <i class="tnxt-btn bi bi-arrow-right"></i>
+        </div>
+      </div>
+      <script>
+        const treadingContainers = [
+          ...document.querySelectorAll(".trending-container"),
+        ];
+        const tnxtBtn = [...document.querySelectorAll(".tnxt-btn")];
+        const tpreBtn = [...document.querySelectorAll(".tpre-btn")];
+
+        treadingContainers.forEach((item, i) => {
+          let containerDimenstions = item.getBoundingClientRect();
+          let containerWidth = containerDimenstions.width;
+
+          tnxtBtn[i].addEventListener("click", () => {
+            item.scrollLeft += containerWidth;
+          });
+
+          tpreBtn[i].addEventListener("click", () => {
+            item.scrollLeft -= containerWidth;
+          });
+        });
+      </script>
+    </section>
+    <!-- trending end -->
+
+    <!-- most watched start -->
+    <div class="container infos">
+      <h2>For You</h2>
+    </div>
+    <section class="p-4">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-primary text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Machine Learning</h3>
+                <p class="card-text">
+                  Machine Learning using Python by Dr.Siv kesav
+                </p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <p>4.1 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-danger text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Data Science</h3>
+                <p class="card-text">Data Science using Python by Dr.Madhu</p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <p>3.1 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-primary text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">DBMS</h3>
+                <p class="card-text">
+                  Database Management Systems by Dr.Yogendra
+                </p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <p>5 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-primary text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Machine Learning</h3>
+                <p class="card-text">
+                  Machine Learning using Python by Dr.Siv kesav
+                </p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <p>4.1 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-danger text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Computer Networks</h3>
+                <p class="card-text">Basics of COmputers by Dr.Madhusudan</p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <p>4.5 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-primary text-white">
+              <card-body class="text-center p-2">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Machine Learning</h3>
+                <p class="card-text">
+                  Machine Learning using Python by Dr.Siv kesav
+                </p>
+                <div>
+                  <span class="heading">User Rating</span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <p>4.1 average based on 254 reviews.</p>
+                </div>
+                <a href="#" class="btn btn-secondary">Read More</a>
+              </card-body>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- most watched end-->
+    <!-- footer start -->
+    <script>
+      $(function () {
+        $("#footer").load("../footer.html");
+      });
+    </script>
+    <div id="footer"></div>
+    <!-- footer end -->
+  </body>
+</html>
